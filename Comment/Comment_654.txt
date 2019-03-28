@@ -1,1 +1,0 @@
-AD cho em hỏi lỗi k hiển thị người gọi đến phải mở khóa màn hình mới biết được ai gọi tới hiện tượng trên là bị sao ạ và cách khắc phục như thế nào Cám ơn AD

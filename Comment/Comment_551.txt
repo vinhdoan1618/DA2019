@@ -1,1 +1,0 @@
-Lỗi cảm ứng khi chơi liên quân, di chuyển ko dc, kéo di chuyển chạy được 1 đoạn lại dừng. Ai bị như vậy ko?

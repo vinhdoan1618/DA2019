@@ -14,7 +14,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 # open list name
-with open(r".\NameDevice\Name_Device.txt") as f:
+with open("/Users/admin/DA2019/NameDevice/Name_Device.txt") as f:
     names = f.read()
 list_name = names.split("\n")
 # crawler data
@@ -48,16 +48,12 @@ for name in range(len(list_name)):
     for cmt in texts:
         comment.append(cmt.text)
         device_name.append(name.text)
-        with io.open(r".\Comment\Comment_%s.txt" % i, "w", encoding="utf8") as save:
-            save.write(cmt.text)
-            i += 1
+
     # Crawl rate star and save to txt: score\score_...txt
     for item in items[1:]:
             rate = item.find_elements_by_css_selector('div.fs-dttrate span.fs-dttr10')
+
             score.append(len(rate))
-            with io.open(r".\Score\Score_%s.txt" % m, "w", encoding="utf8") as save:
-                save.write(str(len(rate)))
-                m += 1
 
 
     #Save data in dataframe
@@ -66,7 +62,7 @@ for name in range(len(list_name)):
 
 
     #export data to csv file
-    scraped_data.to_csv('Data.csv', encoding='utf-8')
+    scraped_data.to_csv('/Users/admin/DA2019/Data/Data_Train.csv', encoding='utf-8')
 
 
 

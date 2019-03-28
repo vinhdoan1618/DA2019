@@ -1,1 +1,0 @@
-Phần cấu hình có j đó sai sai , độ phân giải màn hình chưa tới 2k , gpu 506 , đáng le phải 509 chứ
