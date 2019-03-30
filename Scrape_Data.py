@@ -31,9 +31,7 @@ for name in range(len(list_name)):
     driver.get(path_link)
     actions = webdriver.ActionChains(driver)
     wait = WebDriverWait(driver, 300)
-
     #load all review .find_element_by_xpath("""//*[@id="totalrateres"]""").text: wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "#danh-gia-nhan-xet > div.fs-dttrating > p > span")))
-
     while driver.find_element_by_xpath("""//*[@id="danh-gia-nhan-xet"]/div[2]/p/span""").find_element_by_xpath(
             """//*[@id="totalrateres"]""").text:
         driver.find_element_by_xpath("""//*[@id="danh-gia-nhan-xet"]/div[2]/p/span""").click()

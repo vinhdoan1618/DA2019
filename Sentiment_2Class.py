@@ -7,6 +7,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.preprocessing import Binarizer
 import numpy as np
 from sklearn.linear_model import LogisticRegression
+from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import accuracy_score,classification_report,confusion_matrix
 from Function import tachtu
 
@@ -15,7 +16,7 @@ tf = TfidfVectorizer(min_df=5,max_df= 0.8,max_features=3000,sublinear_tf=True)
 tf.fit(data['Review'].values.astype('U'))
 X = tf.transform(data['Review'].values.astype('U'))
 y_score=(data['Rate'].values).reshape(-1,1)
-binaray = Binarizer(threshold=3)
+binaray = Binarizer(threshold=4)
 y = binaray.fit_transform(y_score)
 y = np.array(y).flatten()
 
@@ -64,3 +65,4 @@ def sentiment2class(text):
     for i in text:
         test=tf.transform(i)
     return model.predict(test)
+print(classification_report(y_test,y_pre))

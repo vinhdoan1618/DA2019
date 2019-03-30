@@ -8,7 +8,7 @@ from openpyxl import Workbook
 data=pd.read_excel('/Users/admin/DA2019/Data/New_Data.xlsx')
 
 text=[tachtu(data['Review'])]
-a=sentiment2class(text)
+#a=sentiment3class(text)
 ketqua=[]
 for i in range(len(text[0])):
    if int(sentiment2class(text)[i])== 1:
