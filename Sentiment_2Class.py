@@ -45,6 +45,8 @@ vocabulary.to_csv('/Users/admin/DA2019/Data/Vocabulary', encoding='utf-8',index=
 stop_word=pd.DataFrame(tf.stop_words_)
 stop_word.to_csv('/Users/admin/DA2019/Data/Stop_Word', encoding='utf-8')
 
+
+
 #Accuracy
 def acc(y_true, y_pred):
     correct = np.sum(y_true == y_pred)

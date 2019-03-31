@@ -61,8 +61,3 @@ for name in range(len(list_name)):
 
     #export data to csv file
     scraped_data.to_csv('/Users/admin/DA2019/Data/Data_Train.csv', encoding='utf-8')
-
-
-
-
-

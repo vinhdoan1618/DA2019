@@ -15,5 +15,6 @@ for i in range(len(text[0])):
       ketqua.append('Positive')
    else:
       ketqua.append('Negative')
+
 dataoutput=pd.DataFrame({'Review':data['Review'],'Result':ketqua})
 dataoutput.to_excel("/Users/admin/DA2019/Data/Data_Predict.xlsx",encoding='utf-8')
