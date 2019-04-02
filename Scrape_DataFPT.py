@@ -42,19 +42,16 @@ for name in range(len(list_name)):
     list_rate = driver.find_element_by_xpath("""//*[@id="listRate"]""")
     items = list_rate.find_elements_by_class_name('fs-dttrateitem')
 
-    #Crawl review and save to txt: comment\comment_...txt
     for cmt in texts:
         comment.append(cmt.text)
         device_name.append(name.text)
 
-    # Crawl rate star and save to txt: score\score_...txt
     for item in items[1:]:
             rate = item.find_elements_by_css_selector('div.fs-dttrate span.fs-dttr10')
 
             score.append(len(rate))
 
 
-    #Save data in dataframe
     scraped_data=pd.DataFrame({'Review':comment,'Rate':score,'Device':device_name})
     scraped_data['Review_length']=scraped_data['Review'].apply(lambda x:len(x) - x.count(' '))
 

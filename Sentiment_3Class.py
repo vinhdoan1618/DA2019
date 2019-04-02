@@ -22,12 +22,12 @@ y_pre = model.predict(X_test)
 
 print(classification_report(y_test,y_pre))
 
-#Get vocab from tf idf
-vocabulary=pd.DataFrame(tf.vocabulary_.items(),columns=['Vocabulary','Count'])
-vocabulary.to_csv('/Users/admin/DA2019/Data/Vocabulary', encoding='utf-8',index=False)
-#Get stop word from tf idf
-stop_word=pd.DataFrame(tf.stop_words_)
-stop_word.to_csv('/Users/admin/DA2019/Data/Stop_Word', encoding='utf-8')
+# #Get vocab from tf idf
+# vocabulary=pd.DataFrame(tf.vocabulary_.items(),columns=['Vocabulary','Count'])
+# vocabulary.to_csv('/Users/admin/DA2019/Data/Vocabulary', encoding='utf-8',index=False)
+# #Get stop word from tf idf
+# stop_word=pd.DataFrame(tf.stop_words_)
+# stop_word.to_csv('/Users/admin/DA2019/Data/Stop_Word', encoding='utf-8')
 
 #Accuracy
 def acc(y_true, y_pred):

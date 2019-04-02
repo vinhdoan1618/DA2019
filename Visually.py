@@ -7,8 +7,8 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 
-data= pd.read_csv("/Users/admin/DA2019/Data/Data_Processed",error_bad_lines=False,encoding='utf-8')
-vocab=pd.read_csv("/Users/admin/DA2019/Data/Vocabulary",error_bad_lines=False,encoding='utf-8',index_col=False)
+data= pd.read_excel("/Users/admin/DA2019/Data/Data_Processed.xlsx",error_bad_lines=False,encoding='utf-8')
+vocab=pd.read_excel("/Users/admin/DA2019/Data/Vocabulary.xlsx",error_bad_lines=False,encoding='utf-8',index_col=False)
 #Xoa hang voi rate = 0
 indexZero=data[data['Rate'] == 0].index
 data.drop(indexZero,inplace=True)
@@ -29,9 +29,9 @@ explode = (0.1, 0.1, 0.1,0.1,0.1)  # explode 1st slice
 rate_group.plot(kind='pie', figsize=[8,6], autopct='%.2f%%', colors=colors, explode=explode)
 plt.show()
 
-hist = sns.FacetGrid(data=data, col='Rate')
-hist.map(plt.hist, 'Review_length', bins=50)
-plt.show()
+# hist = sns.FacetGrid(data=data, col='Rate')
+# hist.map(plt.hist, 'Review_length', bins=50)
+# plt.show()
 sns.boxplot(x='Rate', y='Review_length', data=data)
 plt.show()
 

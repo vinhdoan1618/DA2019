@@ -11,12 +11,12 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import accuracy_score,classification_report,confusion_matrix
 from Function import tachtu
 
-data= pd.read_csv("/Users/admin/DA2019/Data/Data_Processed",error_bad_lines=False,encoding='utf-8')
+data= pd.read_excel("/Users/admin/DA2019/Data/Data_Processed.xlsx",error_bad_lines=False,encoding='utf-8')
 tf = TfidfVectorizer(min_df=5,max_df= 0.8,max_features=3000,sublinear_tf=True)
 tf.fit(data['Review'].values.astype('U'))
 X = tf.transform(data['Review'].values.astype('U'))
 y_score=(data['Rate'].values).reshape(-1,1)
-binaray = Binarizer(threshold=4)
+binaray = Binarizer(threshold=3)
 y = binaray.fit_transform(y_score)
 y = np.array(y).flatten()
 
@@ -40,10 +40,10 @@ y_pre = model.predict(X_test)
 
 #Get vocab from tf idf
 vocabulary=pd.DataFrame(tf.vocabulary_.items(),columns=['Vocabulary','Count'])
-vocabulary.to_csv('/Users/admin/DA2019/Data/Vocabulary', encoding='utf-8',index=False)
+vocabulary.to_excel('/Users/admin/DA2019/Data/Vocabulary.xlsx', encoding='utf-8',index=False)
 #Get stop word from tf idf
 stop_word=pd.DataFrame(tf.stop_words_)
-stop_word.to_csv('/Users/admin/DA2019/Data/Stop_Word', encoding='utf-8')
+stop_word.to_excel('/Users/admin/DA2019/Data/Stop_Word.xlsx', encoding='utf-8')
 
 
 
