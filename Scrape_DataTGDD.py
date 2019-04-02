@@ -31,7 +31,7 @@ for name in range(len(list_name)):
         maxpage=driver.find_element_by_xpath("""//*[@id="boxRatingCmt"]/div[3]/div[2]/div/a[last()-1]""")
         maxpage=int(maxpage.text)
         for page in range(2,maxpage):
-                time.sleep(0.5)
+                time.sleep(0.3)
                 texts = driver.find_elements_by_css_selector("""div.list > ul.ratingLst > li.par > div.rc > p > i""")
                 name=driver.find_element_by_xpath("""/html/body/section/div[1]/h1""")
                 for cmt in texts:
@@ -60,7 +60,7 @@ for name in range(len(list_name)):
                 driver.find_element_by_xpath("""//*[@id="comment"]/div[1]/div[3]/div[1]/form/input""").click()
                 time.sleep(0.75)
 
-                ui.WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, """//*[@id="boxRatingCmt"]/div[3]/div[2]/div/a[text()="%s"]"""%page))).click()
+                ui.WebDriverWait(driver, 30).until(EC.element_to_be_clickable((By.XPATH, """//*[@id="boxRatingCmt"]/div[3]/div[2]/div/a[text()="%s"]"""%page))).click()
 
                 #driver.find_element_by_xpath("""//*[@id="boxRatingCmt"]/div[3]/div[2]/div/a[text()="%s"]"""%page).click()
 
