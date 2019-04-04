@@ -5,7 +5,7 @@ import pandas as pd
 from openpyxl import Workbook
 
 
-data=pd.read_excel('/Users/admin/DA2019/Data/New_Data.xlsx')
+data=pd.read_excel('Data/New_Data.xlsx')
 
 text=[tachtu(data['Review'])]
 #a=sentiment3class(text)
@@ -17,4 +17,4 @@ for i in range(len(text[0])):
       ketqua.append('Negative')
 
 dataoutput=pd.DataFrame({'Review':data['Review'],'Result':ketqua})
-dataoutput.to_excel("/Users/admin/DA2019/Data/Data_Predict.xlsx",encoding='utf-8')
+dataoutput.to_excel("Data/Data_Predict.xlsx",encoding='utf-8')

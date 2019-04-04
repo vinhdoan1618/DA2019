@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
 
 
-data =pd.read_excel('/Users/admin/DA2019/Data/3class.xlsx')
+data =pd.read_excel('Data/3class.xlsx')
 
 tf = TfidfVectorizer(min_df=5,max_df= 0.8,max_features=3000,sublinear_tf=True)
 tf.fit(data['Review'].values.astype('U'))

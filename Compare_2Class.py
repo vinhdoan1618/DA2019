@@ -6,9 +6,9 @@ from sklearn.metrics import accuracy_score
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
-
+import Data
 # ------ Load iris -----------
-data= pd.read_excel("/Users/admin/DA2019/Data/Data_Processed.xlsx",error_bad_lines=False,encoding='utf-8')
+data= pd.read_excel("Data/Data_Processed.xlsx",error_bad_lines=False,encoding='utf-8')
 #data =pd.read_excel('3class.xlsx', sheetname='Sheet1')
 
 tf = TfidfVectorizer(min_df=5,max_df= 0.8,max_features=3000,sublinear_tf=True)

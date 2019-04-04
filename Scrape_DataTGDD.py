@@ -10,7 +10,7 @@ from selenium.webdriver.common.by import By
 
 
 # open list name
-with open("/Users/admin/DA2019/Data/tgdd_path") as f:
+with open("Data/tgdd_path") as f:
     names = f.read()
 list_name = names.split("\n")
 # crawler data
@@ -49,7 +49,7 @@ for name in range(len(list_name)):
                 scraped_data['Review_length'] = scraped_data['Review'].apply(lambda x: len(x) - x.count(' '))
 
                 # export data to excel file
-                scraped_data.to_excel('/Users/admin/DA2019/Data/Data_Train_Tgdd.xlsx', encoding='utf-8')
+                scraped_data.to_excel('Data/Data_Train_Tgdd.xlsx', encoding='utf-8')
 
                 from selenium.webdriver.common.action_chains import ActionChains
 

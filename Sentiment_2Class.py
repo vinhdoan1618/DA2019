@@ -11,7 +11,7 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import accuracy_score,classification_report,confusion_matrix
 from Function import tachtu
 
-data= pd.read_excel("/Users/admin/DA2019/Data/Data_Processed.xlsx",error_bad_lines=False,encoding='utf-8')
+data= pd.read_excel("Data/Data_Processed.xlsx",error_bad_lines=False,encoding='utf-8')
 tf = TfidfVectorizer(min_df=5,max_df= 0.8,max_features=3000,sublinear_tf=True)
 tf.fit(data['Review'].values.astype('U'))
 X = tf.transform(data['Review'].values.astype('U'))
@@ -20,15 +20,6 @@ binaray = Binarizer(threshold=3)
 y = binaray.fit_transform(y_score)
 y = np.array(y).flatten()
 
-# count_neg=0
-# count_pos=0
-# for i in y:
-#     if i ==0:
-#         count_neg+=1
-#     elif i==1:
-#         count_pos+=1
-#  print('Binh luan tieu cuc',count_neg)
-# print('Binh luan tich cuc',count_pos)
 
 X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.2,random_state=7,shuffle=True)
 
@@ -40,10 +31,10 @@ y_pre = model.predict(X_test)
 
 #Get vocab from tf idf
 vocabulary=pd.DataFrame(tf.vocabulary_.items(),columns=['Vocabulary','Count'])
-vocabulary.to_excel('/Users/admin/DA2019/Data/Vocabulary.xlsx', encoding='utf-8',index=False)
+vocabulary.to_excel('Data/Vocabulary.xlsx', encoding='utf-8',index=False)
 #Get stop word from tf idf
 stop_word=pd.DataFrame(tf.stop_words_)
-stop_word.to_excel('/Users/admin/DA2019/Data/Stop_Word.xlsx', encoding='utf-8')
+stop_word.to_excel('Data/Stop_Word.xlsx', encoding='utf-8')
 
 
 
@@ -53,15 +44,6 @@ def acc(y_true, y_pred):
     return float(correct)/y_true.shape[0]
 print('accuracy = ', acc(y_test,y_pre ))
 
-#Xây dựng hệ thống phân tích phản hồi khách hàng mua điện thoại di động
-#text =[tachtu(["dùng như cứt màn hình tệ"])]
-#print(str(text))
-#for i in text:
-#    test = tf.transform(i)
-#    if int(model.predict(test))==1:
-#       print('Tích cực')
-#    else:
-#        print('Tiêu cực')
 
 def sentiment2class(text):
     for i in text:

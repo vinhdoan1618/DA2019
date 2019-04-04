@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 #Preprocessing data
 stop_word = ['bị', 'bởi', 'cả', 'các', 'cái', 'cần', 'càng', 'chỉ', 'chiếc', 'cho', 'chứ', 'chưa', 'chuyện', 'có', 'có_thể', 'cứ', 'của', 'cùng', 'cũng', 'đã', 'đang', 'đây', 'để', 'đến_nỗi', 'đều', 'điều', 'do', 'đó', 'được', 'dưới', 'gì', 'khi', 'không', 'là', 'lại', 'lên', 'lúc', 'mà', 'mỗi', 'một_cách', 'này', 'nên', 'nếu', 'ngay', 'nhiều', 'như', 'nhưng', 'những', 'nơi', 'nữa', 'phải', 'qua', 'ra', 'rằng', 'rằng', 'rất', 'rất', 'rồi', 'sau', 'sẽ', 'so', 'sự', 'tại', 'theo', 'thì', 'trên', 'trước', 'từ', 'từng', 'và', 'vẫn', 'vào', 'vậy', 'vì', 'việc', 'với', 'vừa', '!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', '\\', ']', '^', '_', '`', '{', '|', '}', '~']
-data= pd.read_excel("/Users/admin/DA2019/Data/Data_Trainfinal.xlsx",error_bad_lines=False,encoding='utf-8')
+data= pd.read_excel("Data/Data_Trainfinal.xlsx",error_bad_lines=False,encoding='utf-8')
 
 comments = []
 for text in data['Review'] :
@@ -33,7 +33,7 @@ for i in rates:
 
 
 #Get Review length
-data0= pd.read_excel("/Users/admin/DA2019/Data/Data_Trainfinal.xlsx",error_bad_lines=False,encoding='utf-8')
+data0= pd.read_excel("Data/Data_Trainfinal.xlsx",error_bad_lines=False,encoding='utf-8')
 scraped_data=pd.DataFrame({'Review':sentences,'Rate':rates,'Promotion':sentiment,'Device':data0['Device'],'Review_length':data0['Review_length']})
 # scraped_data['Review_length']=scraped_data['Review'].apply(lambda x:len(x) - x.count(' '))
 
@@ -50,7 +50,7 @@ scraped_data.drop(data[data['Review'] == ''].index,inplace=True)
 
 
 
-scraped_data.to_excel('/Users/admin/DA2019/Data/Data_Processed.xlsx', encoding='utf-8')
+scraped_data.to_excel('Data/Data_Processed.xlsx', encoding='utf-8')
 
 
 

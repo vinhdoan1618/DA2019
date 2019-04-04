@@ -14,7 +14,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 # open list name
-with open("/Users/admin/DA2019/NameDevice/Name_Device.txt") as f:
+with open("NameDevice/Name_Device.txt") as f:
     names = f.read()
 list_name = names.split("\n")
 # crawler data
@@ -57,4 +57,4 @@ for name in range(len(list_name)):
 
 
     #export data to csv file
-    scraped_data.to_excel('/Users/admin/DA2019/Data/Data_Train.', encoding='utf-8')
+    scraped_data.to_excel('Data/Data_Train.', encoding='utf-8')
