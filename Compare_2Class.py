@@ -31,28 +31,36 @@ from sklearn import model_selection
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn.svm import SVC
 from sklearn.naive_bayes import MultinomialNB
+from sklearn.neural_network import MLPClassifier
 
 models=[]
-models.append(('LR', LogisticRegression()))
-models.append(('KNN', KNeighborsClassifier()))
-models.append(('CART', DecisionTreeClassifier()))
-models.append(('SVM', SVC()))
-models.append(('NB', MultinomialNB()))
+models.append(('Logistic Regression', LogisticRegression()))
+models.append(('Multinomial Naive Bayes ', MultinomialNB()))
+models.append(('Multi-layer Perceptron', MLPClassifier()))
+models.append(('Decision Tree', DecisionTreeClassifier()))
+models.append(('K-Nearest Neighbor', KNeighborsClassifier()))
 
-results=[]
+
+# results=[]
+# names=[]
+# for name, model in models:
+#     kfold = model_selection.KFold(n_splits=10, random_state=7)
+#     cv_results = model_selection.cross_val_score(model, X_train, y_train, cv=kfold, scoring='accuracy')
+#     results.append(cv_results)
+#     names.append(name)
+#     msg = "%s: %f (%f)" % (name, cv_results.mean()*100, cv_results.std())
+#     print(msg)
+# fig = plt.figure()
+# fig.suptitle('Algorithm Comparison')
+# ax = fig.add_subplot(111)
+# plt.boxplot(results)
+# ax.set_xticklabels(names)
+# plt.show()
 names=[]
 for name, model in models:
-    kfold = model_selection.KFold(n_splits=10, random_state=7)
-    cv_results = model_selection.cross_val_score(model, X_train, y_train, cv=kfold, scoring='accuracy')
-    results.append(cv_results)
     names.append(name)
-    msg = "%s: %f (%f)" % (name, cv_results.mean()*100, cv_results.std())
-    print(msg)
-fig = plt.figure()
-fig.suptitle('Algorithm Comparison')
-ax = fig.add_subplot(111)
-plt.boxplot(results)
-ax.set_xticklabels(names)
-plt.show()
+    model.fit(X_train,y_train)
+    y_pred=model.predict(X_test)
+    acc=accuracy_score(y_test,y_pred)
+    print("Độ chính xác {} là {}%".format(name, round(acc*100,2)))

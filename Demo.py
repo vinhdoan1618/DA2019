@@ -1,13 +1,13 @@
 from Sentiment_2Class import sentiment2class
 #from Sentiment_3Class import sentiment3class
-from Function import tachtu
+from Function import preprocess
 import pandas as pd
 from openpyxl import Workbook
 
 
-data=pd.read_excel('Data/New_Data.xlsx')
+data=pd.read_excel('Data/Data__Tgdd_Demo.xlsx')
 
-text=[tachtu(data['Review'])]
+text=[preprocess(data['Review'])]
 #a=sentiment3class(text)
 ketqua=[]
 for i in range(len(text[0])):

@@ -9,7 +9,7 @@ import numpy as np
 from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import accuracy_score,classification_report,confusion_matrix
-from Function import tachtu
+from Function import preprocess
 
 data= pd.read_excel("Data/Data_Processed.xlsx",error_bad_lines=False,encoding='utf-8')
 tf = TfidfVectorizer(min_df=5,max_df= 0.8,max_features=3000,sublinear_tf=True)
@@ -23,7 +23,8 @@ y = np.array(y).flatten()
 
 X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.2,random_state=7,shuffle=True)
 
-model = LogisticRegression()
+
+model =LogisticRegression()
 model.fit(X_train,y_train)
 y_pre = model.predict(X_test)
 

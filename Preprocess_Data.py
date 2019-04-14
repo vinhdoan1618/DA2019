@@ -34,7 +34,7 @@ for i in rates:
 
 #Get Review length
 data0= pd.read_excel("Data/Data_Trainfinal.xlsx",error_bad_lines=False,encoding='utf-8')
-scraped_data=pd.DataFrame({'Review':sentences,'Rate':rates,'Promotion':sentiment,'Device':data0['Device'],'Review_length':data0['Review_length']})
+scraped_data=pd.DataFrame({'Review':sentences,'Rate':rates,'Emotion':sentiment,'Device':data0['Device'],'Review_length':data0['Review_length']})
 # scraped_data['Review_length']=scraped_data['Review'].apply(lambda x:len(x) - x.count(' '))
 
 #Save data have been processed to csv file
