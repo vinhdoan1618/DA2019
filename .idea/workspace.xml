@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9901da07-2c76-4553-94cb-734c06f9bde2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Evaluation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NB.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demoNB.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Compare_2Class.py" beforeDir="false" afterPath="$PROJECT_DIR$/Compare_2Class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Data_Predict.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Data_Predict.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Data__Tgdd_Demo.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Data__Tgdd_Demo.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Stop_Word.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Stop_Word.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Vocabulary.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Vocabulary.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/~$Data_Trainfinal.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/Demo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sentiment_2Class.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sentiment_2Class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Word_Coud.py" beforeDir="false" afterPath="$PROJECT_DIR$/Word_Coud.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/function.py" beforeDir="false" afterPath="$PROJECT_DIR$/function.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hihi.py" beforeDir="false" afterPath="$PROJECT_DIR$/hihi.py" afterDir="false" />
-    </list>
+    <list default="true" id="9901da07-2c76-4553-94cb-734c06f9bde2" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,8 +75,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Evaluation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="139" column="63" selection-start-line="139" selection-start-column="37" selection-end-line="139" selection-end-column="63" />
+            <state relative-caret-position="60">
+              <caret line="129" column="45" selection-start-line="129" selection-start-column="45" selection-end-line="129" selection-end-column="45" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -429,7 +413,7 @@
       <workItem from="1554819164960" duration="8479000" />
       <workItem from="1555145671193" duration="20384000" />
       <workItem from="1555255026853" duration="1820000" />
-      <workItem from="1555306925712" duration="7963000" />
+      <workItem from="1555306925712" duration="8590000" />
     </task>
     <task id="LOCAL-00001" summary="Demo">
       <created>1552550219301</created>
@@ -442,7 +426,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="269833000" />
+    <option name="totallyTimeSpent" value="270460000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -455,20 +439,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="723" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49295774" visible="true" weight="0.18739903" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49295774" visible="true" weight="0.18739903" />
       <window_info id="Structure" order="1" sideWeight="0.5070422" side_tool="true" weight="0.21700405" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3280507" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29952458" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29952458" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49919224" weight="0.39461172" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3285968" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49919224" weight="0.3074485" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49919224" visible="true" weight="0.3074485" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32646593" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5056543" side_tool="true" weight="0.29160064" />
@@ -476,7 +459,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" x="494" y="69" width="291" height="631" id="SciView" order="3" sideWeight="0.5389408" visible="true" weight="0.40872374" />
+      <window_info anchor="right" x="494" y="69" width="291" height="631" id="SciView" order="3" sideWeight="0.5389408" visible="true" weight="0.24555735" />
       <window_info anchor="right" id="Database" order="4" weight="0.32955465" />
       <window_info anchor="right" x="0" y="0" width="273" height="495" id="Documentation" order="5" sideWeight="0.46105918" side_tool="true" weight="0.7552504" />
       <window_info anchor="right" id="Coverage" order="6" side_tool="true" />
@@ -821,8 +804,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Evaluation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="139" column="63" selection-start-line="139" selection-start-column="37" selection-end-line="139" selection-end-column="63" />
+        <state relative-caret-position="60">
+          <caret line="129" column="45" selection-start-line="129" selection-start-column="45" selection-end-line="129" selection-end-column="45" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
