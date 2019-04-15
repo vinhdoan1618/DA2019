@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import wordcloud
 
 
-df = pd.read_excel('/Users/admin/DA2019/Data/datawordcloud.xlsx', sheetname='Sheet1')
+df = pd.read_excel('Data/Vocabulary.xlsx', sheetname='Sheet1')
 tuvung=df['Vocabulary'].to_list()
 count=df['Count'].to_list()
 dictionary = dict(zip(tuvung, count))

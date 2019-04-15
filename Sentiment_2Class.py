@@ -7,7 +7,6 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.preprocessing import Binarizer
 import numpy as np
 from sklearn.linear_model import LogisticRegression
-from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import accuracy_score,classification_report,confusion_matrix
 from Function import preprocess
 
@@ -21,8 +20,12 @@ y = binaray.fit_transform(y_score)
 y = np.array(y).flatten()
 
 
-X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.2,random_state=7,shuffle=True)
 
+
+
+X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.2,random_state=7,shuffle=True)
+print("X_train:\n{}".format(repr(X_train)))
+print("X_test: \n{}".format(repr(X_test)))
 
 model =LogisticRegression()
 model.fit(X_train,y_train)
@@ -51,3 +54,8 @@ def sentiment2class(text):
         test=tf.transform(i)
     return model.predict(test)
 print(classification_report(y_test,y_pre))
+
+
+
+
+

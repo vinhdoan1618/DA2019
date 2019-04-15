@@ -24,20 +24,20 @@ maxpage=int(maxpage.text)
 for page in range(2,maxpage+1):
                 time.sleep(0.3)
                 texts = driver.find_elements_by_css_selector("""div.list > ul.ratingLst > li.par > div.rc > p > i""")
-                name=driver.find_element_by_xpath("""/html/body/section/div[1]/h1""")
+                #name=driver.find_element_by_xpath("""/html/body/section/div[1]/h1""")
                 for cmt in texts:
                         comment.append(cmt.text)
-                        device_name.append(name.text)
+                        #device_name.append(name.text)
 
-                list_rate = driver.find_element_by_xpath("""//*[@id="boxRatingCmt"]/div[3]""")
-                items = list_rate.find_elements_by_css_selector("""li.par > div.rc""")
-                for item in items:
-                        rate = item.find_elements_by_class_name("""iconcom-txtstar""")
-                        score.append(len(rate))
+                # list_rate = driver.find_element_by_xpath("""//*[@id="boxRatingCmt"]/div[3]""")
+                # items = list_rate.find_elements_by_css_selector("""li.par > div.rc""")
+                # for item in items:
+                #         rate = item.find_elements_by_class_name("""iconcom-txtstar""")
+                #         score.append(len(rate))
                 # get length
 
-                scraped_data = pd.DataFrame({'Review': comment, 'Rate': score, 'Device': device_name})
-                scraped_data['Review_length'] = scraped_data['Review'].apply(lambda x: len(x) - x.count(' '))
+                scraped_data = pd.DataFrame({'Review': comment})
+                #scraped_data['Review_length'] = scraped_data['Review'].apply(lambda x: len(x) - x.count(' '))
 
                 # export data to excel file
                 scraped_data.to_excel('Data/Data__Tgdd_Demo.xlsx', encoding='utf-8')

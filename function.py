@@ -18,6 +18,3 @@ def preprocess(texts):
                     sent.append(word)
         sentences.append(" ".join(sent))
     return sentences
-
-print(preprocess(['Sản phẩm dùng thật tuyệt vời, sang trọng đẳng cấp và rất mượt khi chơi game']))
-
