@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9901da07-2c76-4553-94cb-734c06f9bde2" name="Default Changelist" comment="" />
+    <list default="true" id="9901da07-2c76-4553-94cb-734c06f9bde2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compare_2Class.py" beforeDir="false" afterPath="$PROJECT_DIR$/Compare_2Class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DA2019 word.docx" beforeDir="false" afterPath="$PROJECT_DIR$/DA2019 word.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Stop_Word.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Stop_Word.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Vocabulary.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Vocabulary.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/~$Data_NB_Predict.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sentiment_2Class.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sentiment_2Class.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +26,7 @@
     <SUITE FILE_PATH="coverage/DA2019$Scrape_DataDemo.coverage" NAME="Scrape_DataDemo Coverage Results" MODIFIED="1554045348455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DA2019$Data_Preprocessing.coverage" NAME="Data_Preprocessing Coverage Results" MODIFIED="1552673852092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DA2019$Visually.coverage" NAME="Visually Coverage Results" MODIFIED="1554120836691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/DA2019$Compare_2Class.coverage" NAME="Compare_2Class Coverage Results" MODIFIED="1555310401165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DA2019$Compare_2Class.coverage" NAME="Compare_2Class Coverage Results" MODIFIED="1555939363425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DA2019$Scrape_Data.coverage" NAME="Scrape_Data Coverage Results" MODIFIED="1553071584646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DA2019$Word_Coud.coverage" NAME="Word_Coud Coverage Results" MODIFIED="1555312979262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DA2019$Sentiment.coverage" NAME="Sentiment Coverage Results" MODIFIED="1552710957833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -54,7 +62,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Preprocess_Data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="82">
+            <state relative-caret-position="510">
               <caret line="36" column="45" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="45" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
@@ -66,8 +74,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Sentiment_2Class.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="35">
-              <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+            <state relative-caret-position="119">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,8 +86,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Evaluation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="129" column="45" selection-start-line="129" selection-start-column="45" selection-end-line="129" selection-end-column="45" />
+            <state relative-caret-position="-196">
+              <caret line="65" column="24" selection-start-line="65" selection-end-line="66" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -87,8 +98,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Compare_2Class.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="531">
-              <caret line="89" selection-start-line="89" selection-end-line="89" />
+            <state relative-caret-position="270">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
@@ -96,8 +107,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="36" column="33" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="33" />
+            <state relative-caret-position="258">
+              <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
@@ -150,10 +161,10 @@
         <option value="$PROJECT_DIR$/NB.py" />
         <option value="$PROJECT_DIR$/demoNB.py" />
         <option value="$PROJECT_DIR$/Demo.py" />
-        <option value="$PROJECT_DIR$/Compare_2Class.py" />
         <option value="$PROJECT_DIR$/Word_Coud.py" />
-        <option value="$PROJECT_DIR$/Sentiment_2Class.py" />
         <option value="$PROJECT_DIR$/Evaluation.py" />
+        <option value="$PROJECT_DIR$/Sentiment_2Class.py" />
+        <option value="$PROJECT_DIR$/Compare_2Class.py" />
       </list>
     </option>
   </component>
@@ -170,7 +181,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -187,6 +197,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -220,7 +231,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Evaluation">
+  <component name="RunManager" selected="Python.Compare_2Class">
     <configuration name="Compare_2Class" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DA2019" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -247,6 +258,9 @@
       <module name="DA2019" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -349,10 +363,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Evaluation" />
-        <item itemvalue="Python.Sentiment_2Class" />
-        <item itemvalue="Python.Word_Coud" />
         <item itemvalue="Python.Compare_2Class" />
+        <item itemvalue="Python.Sentiment_2Class" />
+        <item itemvalue="Python.Evaluation" />
+        <item itemvalue="Python.Word_Coud" />
         <item itemvalue="Python.Demo" />
       </list>
     </recent_temporary>
@@ -413,7 +427,9 @@
       <workItem from="1554819164960" duration="8479000" />
       <workItem from="1555145671193" duration="20384000" />
       <workItem from="1555255026853" duration="1820000" />
-      <workItem from="1555306925712" duration="8590000" />
+      <workItem from="1555306925712" duration="8873000" />
+      <workItem from="1555506102030" duration="483000" />
+      <workItem from="1555833506530" duration="4013000" />
     </task>
     <task id="LOCAL-00001" summary="Demo">
       <created>1552550219301</created>
@@ -426,7 +442,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="270460000" />
+    <option name="totallyTimeSpent" value="275239000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -439,27 +455,28 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="723" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49295774" visible="true" weight="0.18739903" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49295774" visible="true" weight="0.19224556" />
       <window_info id="Structure" order="1" sideWeight="0.5070422" side_tool="true" weight="0.21700405" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3280507" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.29952458" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29952458" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49919224" weight="0.39461172" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3285968" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49919224" visible="true" weight="0.3074485" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49919224" weight="0.3074485" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32646593" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5056543" side_tool="true" weight="0.29160064" />
-      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49434572" weight="0.54833597" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49434572" weight="0.25990492" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" x="494" y="69" width="291" height="631" id="SciView" order="3" sideWeight="0.5389408" visible="true" weight="0.24555735" />
+      <window_info anchor="right" x="494" y="69" width="291" height="631" id="SciView" order="3" sideWeight="0.5389408" weight="0.24555735" />
       <window_info anchor="right" id="Database" order="4" weight="0.32955465" />
       <window_info anchor="right" x="0" y="0" width="273" height="495" id="Documentation" order="5" sideWeight="0.46105918" side_tool="true" weight="0.7552504" />
       <window_info anchor="right" id="Coverage" order="6" side_tool="true" />
@@ -720,16 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Function.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demoNB.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -761,23 +768,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Preprocess_Data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="36" column="45" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Compare_2Class.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="89" selection-start-line="89" selection-end-line="89" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Word_Coud.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -785,27 +775,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo.py">
+    <entry file="file://$PROJECT_DIR$/Function.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="36" column="33" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="33" />
+        <state relative-caret-position="270">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
-            <element signature="e#0#44#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Preprocess_Data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="36" column="45" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sentiment_2Class.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+        <state relative-caret-position="119">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Compare_2Class.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Evaluation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="129" column="45" selection-start-line="129" selection-start-column="45" selection-end-line="129" selection-end-column="45" />
+        <state relative-caret-position="-196">
+          <caret line="65" column="24" selection-start-line="65" selection-end-line="66" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>

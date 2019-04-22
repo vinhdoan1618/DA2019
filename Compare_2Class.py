@@ -21,7 +21,7 @@ y = binaray.fit_transform(y_score)
 y = np.array(y).flatten()
 
 from sklearn.model_selection import train_test_split
-X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.2,random_state=42,shuffle=True)
+X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.2,random_state=7,shuffle=True)
 fig = plt.figure(figsize=(15,20))
 
 
@@ -33,14 +33,14 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.neural_network import MLPClassifier
+from sklearn.svm import SVC
 
 models=[]
 models.append(('Logistic Regression', LogisticRegression()))
 models.append(('Multinomial Naive Bayes ', MultinomialNB()))
-models.append(('Multi-layer Perceptron', MLPClassifier()))
 models.append(('Decision Tree', DecisionTreeClassifier()))
 models.append(('K-Nearest Neighbor', KNeighborsClassifier()))
-
+models.append(('SVM', SVC()))
 
 # results=[]
 # names=[]
@@ -57,34 +57,34 @@ models.append(('K-Nearest Neighbor', KNeighborsClassifier()))
 # plt.boxplot(results)
 # ax.set_xticklabels(names)
 # plt.show()
-# names=[]
-# for name, model in models:
-#     names.append(name)
-#     model.fit(X_train,y_train)
-#     y_pred=model.predict(X_test)
-#     acc=accuracy_score(y_test,y_pred)
-#     print("Độ chính xác {} là {}%".format(name, round(acc*100,2)))
-
-results=[]
 names=[]
 for name, model in models:
-    probs = model.predict_proba(X_test)
-    probs = probs[:, 1]
+    names.append(name)
+    model.fit(X_train,y_train)
+    y_pred=model.predict(X_test)
+    acc=accuracy_score(y_test,y_pred)
+    print("Độ chính xác {} là {}%".format(name, round(acc*100,2)))
 
-    from sklearn.metrics import roc_auc_score
-    from sklearn.metrics import roc_curve, auc
-    import matplotlib.pyplot as plt
-
-    auc = roc_auc_score(y_test, probs)
-    print('AUC: %.3f' % auc)
-    fpr, tpr, thresholds = roc_curve(y_test, probs, pos_label=1)
-    # print('Thresholds:')
-    # print(thresholds)
-    # print('False Positive Rate:')
-    # print(fpr)
-    # print('True Positive Rate:')
-    # print(tpr)
-
-    plt.plot([0, 1], [0, 1], linestyle='--')
-    plt.plot(fpr, tpr, marker='.')
-    plt.show()
+# results=[]
+# names=[]
+# for name, model in models:
+#     probs = model.predict_proba(X_test)
+#     probs = probs[:, 1]
+#
+#     from sklearn.metrics import roc_auc_score
+#     from sklearn.metrics import roc_curve, auc
+#     import matplotlib.pyplot as plt
+#
+#     auc = roc_auc_score(y_test, probs)
+#     print('AUC: %.3f' % auc)
+#     fpr, tpr, thresholds = roc_curve(y_test, probs, pos_label=1)
+#     # print('Thresholds:')
+#     # print(thresholds)
+#     # print('False Positive Rate:')
+#     # print(fpr)
+#     # print('True Positive Rate:')
+#     # print(tpr)
+#
+#     plt.plot([0, 1], [0, 1], linestyle='--')
+#     plt.plot(fpr, tpr, marker='.')
+#     plt.show()
