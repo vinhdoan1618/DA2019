@@ -8,16 +8,19 @@ from sklearn.externals import joblib
 
 
 data=pd.read_excel('Data/Data_Tgdd_Demo.xlsx')
-
+dataforword=pd.read_excel('Data/dataforword.xlsx')
 
 text=[preprocess(data['Review'])]
+dataforwordprocessed=[preprocess(dataforword['Review'])]
+datasave=pd.DataFrame({'Review':dataforwordprocessed[0]})
+datasave.to_excel("Data/dataforwordprocessed.xlsx",encoding='utf-8')
+
+
 tf = TfidfVectorizer(min_df=5,max_df= 0.8,max_features=3000,sublinear_tf=True)
 tf.fit(data['Review'].values.astype('U'))
 
 
 ketqua=[]
-
-
 for i in range(len(text[0])):
    if int(sentiment2class(text)[i])== 1:
       ketqua.append('Positive')
