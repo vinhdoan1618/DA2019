@@ -8,7 +8,6 @@ from sklearn.preprocessing import Binarizer
 import numpy as np
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score,classification_report,confusion_matrix
-from Function import preprocess
 
 data= pd.read_excel("Data/Data_Processed.xlsx",error_bad_lines=False,encoding='utf-8')
 tf = TfidfVectorizer(min_df=5,max_df= 0.8,max_features=3000,sublinear_tf=True)
@@ -36,6 +35,7 @@ stop_word.to_excel('Data/Stop_Word.xlsx', encoding='utf-8')
 
 
 
+
 #Accuracy
 def acc(y_true, y_pred):
     correct = np.sum(y_true == y_pred)
@@ -48,8 +48,5 @@ def sentiment2class(text):
         test=tf.transform(i)
     return model.predict(test)
 print(classification_report(y_test,y_pre))
-
-
-
 
 

@@ -9,7 +9,7 @@ import numpy as np
 from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import accuracy_score,classification_report,confusion_matrix
-from Function import preprocess
+from Preprocess_DataDemo import preprocess
 
 data= pd.read_excel("Data/Data_Processed.xlsx",error_bad_lines=False,encoding='utf-8')
 tf = TfidfVectorizer(min_df=5,max_df= 0.8,max_features=3000,sublinear_tf=True)
@@ -44,12 +44,6 @@ def acc(y_true, y_pred):
     correct = np.sum(y_true == y_pred)
     return float(correct)/y_true.shape[0]
 print('accuracy = ', acc(y_test,y_pre ))
-
-
-def sentiment2class(text):
-    for i in text:
-        test=tf.transform(i)
-    return model.predict(test)
 print(classification_report(y_test,y_pre))
 
 
@@ -117,7 +111,6 @@ auc = roc_auc_score(y_test, probs)
 print('AUC: %.3f' % auc)
 # calculate roc curve
 fpr, tpr, thresholds = roc_curve(y_test, probs,pos_label = 1)
-
 # plot no skill
 plt.plot([0, 1], [0, 1], linestyle='--')
 # plot the roc curve for the model
@@ -125,22 +118,26 @@ plt.plot(fpr, tpr, marker='.')
 # show the plot
 plt.show()
 
-from sklearn.model_selection import GridSearchCV
-from sklearn.linear_model import LogisticRegression
-param_grid = {'C': [0.001, 0.01, 0.1, 1, 10]}
-grid = GridSearchCV(LogisticRegression(), param_grid, cv=5)
-grid.fit(X_train, y_train)
-
-feature_names = tf.get_feature_names()
-
-print("Best cross-validation score: {:.2f}".format(grid.best_score_))
-print("Best parameters: ", grid.best_params_)
-print("Best estimator: ", grid.best_estimator_)
-import mglearn
-mglearn.tools.visualize_coefficients(grid.best_estimator_.coef_, feature_names  ,n_top_features=25)
+from sklearn.metrics import roc_auc_score
+from sklearn.metrics import roc_curve
+logit_roc_auc = roc_auc_score(y_test, model.predict(X_test))
+fpr, tpr, thresholds = roc_curve(y_test, probs)
+plt.figure()
+plt.plot(fpr, tpr, label='Logistic Regression (area = %0.2f)' % logit_roc_auc)
+plt.plot([0, 1], [0, 1],'r--')
+plt.xlim([0.0, 1.0])
+plt.ylim([0.0, 1.05])
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
+plt.title('Receiver operating characteristic')
+plt.legend(loc="lower right")
+plt.savefig('Visually/Log_ROC')
 plt.show()
 
-vector= grid.best_estimator_.named_steps['tfidfvectorizer']
+from sklearn.ensemble import RandomForestClassifier
+from yellowbrick.classifier import ClassPredictionError
 
-sorted_by_idf = np.argsort(vector.idf_)
-print("Feature with lowest idf : \n{}".format(feature_names[sorted_by_idf[:100]]))
+visualizer = ClassPredictionError(model=LogisticRegression())
+visualizer.fit(X=X_train, y=y_train)
+visualizer.score(X=X_test, y=y_test)
+visualizer.poof()

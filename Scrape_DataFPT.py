@@ -4,7 +4,6 @@ from selenium import webdriver
 import pandas as pd
 from pyvi import ViTokenizer
 import numpy as np
-import seaborn as sns
 import matplotlib.pyplot as plt
 import glob
 import time
