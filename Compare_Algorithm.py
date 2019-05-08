@@ -40,8 +40,6 @@ models.append(('Decision Tree', DecisionTreeClassifier()))
 models.append(('K-Nearest Neighbor', KNeighborsClassifier()))
 models.append(('Neural network', MLPClassifier()))
 models.append(('SVM', SVC()))
-
-
 # results=[]
 # names=[]
 # for name, model in models:

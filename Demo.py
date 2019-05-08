@@ -28,7 +28,7 @@ for i in range(len(text[0])):
       ketqua.append('Negative')
 
 dataoutput=pd.DataFrame({'Review':data['Review'],'Result':ketqua})
-dataoutput.to_excel("Data/Data_Predict.xlsx",encoding='utf-8')
+dataoutput.to_excel("Data/Data_DemoPredicted.xlsx",encoding='utf-8')
 
 import matplotlib.pyplot as plt
 
