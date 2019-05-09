@@ -9,7 +9,7 @@ from selenium.webdriver.common.by import By
 
 # crawler data
 driver = webdriver.Chrome()
-path = "https://www.thegioididong.com/dtdd/samsung-galaxy-s10"
+path = "https://www.thegioididong.com/dtdd/samsung-galaxy-a10"
 texts = []
 i = 0
 m=0
@@ -41,7 +41,7 @@ for page in range(2,maxpage+1):
                 #scraped_data['Review_length'] = scraped_data['Review'].apply(lambda x: len(x) - x.count(' '))
 
                 # export data to excel file
-                scraped_data.to_excel('Data/Data_Tgdd_Demo.xlsx', encoding='utf-8')
+                scraped_data.to_excel('Data/Data_Demo.xlsx', encoding='utf-8')
 
                 from selenium.webdriver.common.action_chains import ActionChains
 

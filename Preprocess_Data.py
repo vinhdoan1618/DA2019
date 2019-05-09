@@ -50,7 +50,7 @@ scraped_data.drop(data[data['Review'] == ''].index,inplace=True)
 
 
 
-scraped_data.to_excel('Data/Data_Processed.xlsx', encoding='utf-8')
+scraped_data.to_excel('Data/Data_TrainProcessed.xlsx', encoding='utf-8')
 
 
 

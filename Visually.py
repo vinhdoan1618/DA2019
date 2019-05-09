@@ -7,7 +7,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 
-data= pd.read_excel("Data/Data_Processed.xlsx",error_bad_lines=False,encoding='utf-8')
+data= pd.read_excel("Data/Data_TrainProcessed.xlsx",error_bad_lines=False,encoding='utf-8')
 vocab=pd.read_excel("Data/Vocabulary.xlsx",error_bad_lines=False,encoding='utf-8',index_col=False)
 #Xoa hang voi rate = 0
 indexZero=data[data['Rate'] == 0].index

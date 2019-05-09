@@ -36,6 +36,7 @@ for name in range(len(list_name)):
                 name=driver.find_element_by_xpath("""/html/body/section/div[1]/h1""")
                 for cmt in texts:
                         comment.append(cmt.text)
+                        print(cmt.text)
                         device_name.append(name.text)
 
                 list_rate = driver.find_element_by_xpath("""//*[@id="boxRatingCmt"]/div[3]""")

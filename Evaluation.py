@@ -11,7 +11,7 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import accuracy_score,classification_report,confusion_matrix
 from Preprocess_DataDemo import preprocess
 
-data= pd.read_excel("Data/Data_Processed.xlsx",error_bad_lines=False,encoding='utf-8')
+data= pd.read_excel("Data/Data_TrainProcessed.xlsx",error_bad_lines=False,encoding='utf-8')
 tf = TfidfVectorizer(min_df=5,max_df= 0.8,max_features=3000,sublinear_tf=True)
 tf.fit(data['Review'].values.astype('U'))
 X = tf.transform(data['Review'].values.astype('U'))

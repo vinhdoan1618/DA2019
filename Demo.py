@@ -7,7 +7,7 @@ from sklearn.externals import joblib
 
 
 
-data=pd.read_excel('Data/Data_Tgdd_Demo.xlsx')
+data=pd.read_excel('Data/Data_Demo.xlsx')
 dataforword=pd.read_excel('Data/dataforword.xlsx')
 
 text=[preprocess(data['Review'])]

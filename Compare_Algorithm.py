@@ -7,7 +7,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
 import Data
-data= pd.read_excel("Data/Data_Processed.xlsx",error_bad_lines=False,encoding='utf-8')
+data= pd.read_excel("Data/Data_TrainProcessed.xlsx",error_bad_lines=False,encoding='utf-8')
 
 tf = TfidfVectorizer(min_df=5,max_df= 0.8,max_features=3000,sublinear_tf=True)
 tf.fit(data['Review'].values.astype('U'))
@@ -38,8 +38,7 @@ models.append(('Logistic Regression', LogisticRegression()))
 models.append(('Multinomial Naive Bayes ', MultinomialNB()))
 models.append(('Decision Tree', DecisionTreeClassifier()))
 models.append(('K-Nearest Neighbor', KNeighborsClassifier()))
-models.append(('Neural network', MLPClassifier()))
-models.append(('SVM', SVC()))
+#models.append(('Neural network', MLPClassifier()))
 # results=[]
 # names=[]
 # for name, model in models:
@@ -102,3 +101,29 @@ for name, model in models:
 #     plt.plot([0, 1], [0, 1], linestyle='--')
 #     plt.plot(fpr, tpr, marker='.')
 #     plt.show()
+
+
+import matplotlib.pyplot as plt
+
+Value = {'LR':84.76 , 'NB': 83.75, 'NN': 79.82, 'CART': 78.71, 'KNN': 62.87}
+
+Counts = sorted(Value.values(), reverse=True)
+Foods = sorted(Value, key=Value.__getitem__, reverse=True)
+
+ind_Value = range(len(Value))
+
+# Vẽ biểu đồ cột
+plt.bar(ind_Value, Counts, align='center')
+plt.xticks(ind_Value, Foods)
+
+# Label x, y axit
+plt.xlabel('Thuật toán phân lớp')
+plt.ylabel('Accuracy (%)')
+for x, y in zip(ind_Value, Counts):
+    plt.text(x + 0.02, y + 0.05, '%.2f' % y, ha='center', va='bottom')
+
+# Tăng trục y thêm 20 đơn vị
+plt.ylim(0, Counts[0] + 20)
+
+# Cuối cùng là show kết quả!!!
+plt.show()
