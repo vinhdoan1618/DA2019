@@ -40,13 +40,13 @@ stop_word.to_excel('Data/Stop_Word.xlsx', encoding='utf-8')
 def acc(y_true, y_pred):
     correct = np.sum(y_true == y_pred)
     return float(correct)/y_true.shape[0]
-print('accuracy = ', acc(y_test,y_pre ))
+#print('accuracy = ', acc(y_test,y_pre ))
 
 
 def sentiment2class(text):
     for i in text:
         test=tf.transform(i)
     return model.predict(test)
-print(classification_report(y_test,y_pre))
+#print(classification_report(y_test,y_pre))
 
 

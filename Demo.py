@@ -8,12 +8,12 @@ from sklearn.externals import joblib
 
 
 data=pd.read_excel('Data/Data_Demo.xlsx')
-dataforword=pd.read_excel('Data/dataforword.xlsx')
+dataforword=pd.read_excel('Data/Data_Demo.xlsx')
 
 text=[preprocess(data['Review'])]
 dataforwordprocessed=[preprocess(dataforword['Review'])]
 datasave=pd.DataFrame({'Review':dataforwordprocessed[0]})
-datasave.to_excel("Data/dataforwordprocessed.xlsx",encoding='utf-8')
+datasave.to_excel("Data/Data_DemoPreprocessed.xlsx",encoding='utf-8')
 
 
 tf = TfidfVectorizer(min_df=5,max_df= 0.8,max_features=3000,sublinear_tf=True)

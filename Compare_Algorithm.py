@@ -105,7 +105,7 @@ for name, model in models:
 
 import matplotlib.pyplot as plt
 
-Value = {'LR':84.76 , 'NB': 83.75, 'NN': 79.82, 'CART': 78.71, 'KNN': 62.87}
+Value = {'LR':85.07 , 'NB': 83.65, 'NN': 79.51, 'CART': 78.71, 'KNN': 62.29}
 
 Counts = sorted(Value.values(), reverse=True)
 Foods = sorted(Value, key=Value.__getitem__, reverse=True)
