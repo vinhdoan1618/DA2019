@@ -5,8 +5,6 @@ from openpyxl import Workbook
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.externals import joblib
 
-
-
 data=pd.read_excel('Data/Data_Demo.xlsx')
 dataforword=pd.read_excel('Data/Data_Demo.xlsx')
 

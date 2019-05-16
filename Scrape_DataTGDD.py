@@ -44,6 +44,7 @@ for name in range(len(list_name)):
                 for item in items:
                         rate = item.find_elements_by_class_name("""iconcom-txtstar""")
                         score.append(len(rate))
+                        print(len(rate))
                 # get length
 
                 scraped_data = pd.DataFrame({'Review': comment, 'Rate': score, 'Device': device_name})
